@@ -1,0 +1,104 @@
+*{
+    margin:0px;
+    padding: 0px;
+    list-style:none;
+    text-decoration: none;
+    box-sizing:border-box; 
+}/*reseter*/
+@font-face {
+    font-family:"VproRegular";
+    src: url("Fonts/VisueltPro-Regular.ttf");
+}
+@font-face {
+    font-family:"VproMedium";
+    src: url("Fonts/VisueltPro-Medium.ttf");
+}
+@font-face {
+    font-family:"VproBold";
+    src: url("Fonts/VisueltPro-Bold.ttf");
+}
+
+@font-face {
+    font-family:"VproBlack";
+    src: url("Fonts/VisueltPro-Black.ttf");
+}
+body{position: relative;  background-color:#F0EBD8;}
+.main-interface{
+    width: 100%;
+    height:100vh;
+    padding-left: 50px;
+    padding-right:50px;
+    font-family:"VproRegular",sans-serif;
+    font-size: 15px;
+}
+nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    /* z-index:0; */
+    width:100%;
+    height:48px;
+    background-color:#F0EBD8; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:50px;
+    padding-right:50px;
+}
+/*Reflechir à un moye de rendre ce bloc un peu plus esthetique*/
+nav div{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+nav div span a{
+    color:#0D1321;
+    font-family: "VproBold";
+    margin-right: 5px;
+}
+.content{
+    /* z-index:1; */
+    width:fit-content;
+    height: fit-content;
+    color:black;
+    /* background-color:black; */
+    padding-left:200px;
+    padding-right:200px;
+    margin:50px;
+}
+.content li{margin-top: 10px;}
+.promptZone{
+    width: 400px;
+    border: 1px solid #0D1321;
+    border-radius:20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 18px;
+    padding-right: 18px;
+    background-color: #0D1321;
+
+    position: fixed;
+    top:90%;
+    left:35%
+}
+input{
+    outline:none;
+    height: 44px;
+    width: 300px;
+    font-size: 12px;
+    font-family:"VproRegular";
+    color:white;
+    background-color: #0D1321;
+    border: none;
+}
+#sendinIcon{
+    cursor: pointer;
+}
+::placeholder{
+    color:#3E5C76;
+    opacity: 0.7;
+    font-size: 12px;
+}

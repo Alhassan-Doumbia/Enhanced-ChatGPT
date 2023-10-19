@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Image&Data\ChatGPT-White-Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Enhanced-ChatGpt</title>
+</head>
+<body>
+    <section class="main-interface">
+        <nav>
+            <a href=""><img src="Image&Data\Hamburger-Menu Icon.png" alt="" class="icon"></a>
+            <img src="Image&Data\Chat-GPT-GrayIcon.png" alt="" class="icon">
+            <div>
+                <span><a href="#">Log Out</a></span>
+                <a href=""><img src="Image&Data\Log-Out Icon.png" alt="" class="icon"></a>
+            </div>
+        </nav>
+        <div class="content">
+            <ul class="chat-content">
+              
+            </ul>
+        </div>
+        <div class="promptZone">
+            <img src="Image&Data\ChatGPT-White-Logo.png" alt="" class="icon">
+            <form action="" method="get">
+                <input type="text" placeholder="send a message" id="userInputField" autocomplete="off"/>
+            </form>
+            <img src="Image&Data\Sending Icon.png" alt="" id="sendinIcon">
+            <!-- L'image utilisée pour le bouton d'envoi sera géré via javascrip ,il ne sera donc ps employé dans une balise a -->
+        </div>
+    </section>
+    <!-- La seule Zone qui eut defiler est la zone du conten question-reponses ,
+    La zone de prompt et le header et les autres élément sont en position Fixed par rapport content  -->
+
+    <script src="script.js"></script>
+</body>
+</html>
