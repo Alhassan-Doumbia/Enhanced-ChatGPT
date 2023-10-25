@@ -17,23 +17,30 @@
                 <a href=""><img src="Image&Data\Log-Out Icon.png" alt="" class="icon"></a>
             </div>
         </nav>
+
         <div class="content">
-            <ul class="chat-content">
-              
-            </ul>
+            <ul class="chat-content"><!-- C'est ici que s'afficheront les Li "User" et "Chat"--></ul>
         </div>
-        <div class="promptZone">
-            <img src="Image&Data\ChatGPT-White-Logo.png" alt="" class="icon">
-            <form action="" method="get">
-                <input type="text" placeholder="send a message" id="userInputField" autocomplete="off"/>
-            </form>
-            <img src="Image&Data\Sending Icon.png" alt="" id="sendinIcon">
-            <!-- L'image utilisée pour le bouton d'envoi sera géré via javascrip ,il ne sera donc ps employé dans une balise a -->
+        <div class="promptZone-container">
+            <!-- On va d'abord entrer les zones d'input -->
+            <!-- ensuite on va mettre les boutons , avec le container qui a satail qui s'adapte en fonction des éléments
+            
+            etant donné qu'en fonction du contenu , qu'il viennende l'input ou de chatGPT , les couleurs changeront , le libelé "User ne sert plus à rien 
+            MashaAlah"-->
+            <div class="promptZone">
+                <img src="Image&Data\ChatGPT-White-Logo.png" alt="" class="icon">
+                <form action="" method="get">
+                    <input type="text" placeholder="send a message" id="userInputField" autocomplete="off"/>
+                </form>
+                <img src="Image&Data\Sending Icon.png" alt="" id="sendinIcon">
+            </div>
+            <div id="mic-icon">
+                <ion-icon name="mic"></ion-icon>
+            </div>
         </div>
     </section>
-    <!-- La seule Zone qui eut defiler est la zone du conten question-reponses ,
-    La zone de prompt et le header et les autres élément sont en position Fixed par rapport content  -->
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
