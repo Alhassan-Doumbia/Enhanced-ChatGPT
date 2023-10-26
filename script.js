@@ -13,9 +13,9 @@ function speechRecognition() {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     recognition.continuous = false;
-    recognition.lang = "en-US"//"fr-FR";
+    recognition.lang = "fr-FR"//"en-US";
     recognition.interimResults = true;
-
+    console.log('clicked');// pour le debogage
     let currentTranscription = '';
     let timeout;
 
@@ -32,12 +32,12 @@ function speechRecognition() {
     }
     recognition.start();
 }
+
 // Réagir au clic sur l'icône d'envoi
-sendIcon.addEventListener("click", showUserQuery());
+sendIcon.addEventListener("click", showUserQuery);
 const micIcon = document.querySelector("#mic-icon");
 // Réagir au clic sur l'icône du microphone
-micIcon.addEventListener('click', speechRecognition());
-
+micIcon.addEventListener("click", speechRecognition);// on a supprimé 
 const inputField = document.getElementById("userInputField");
 
 // Réagir à la pression de la touche "Entrée" pour envoyer la requête
