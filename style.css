@@ -1,89 +1,107 @@
-*{
-    margin:0px;
-    padding: 0px;
-    list-style:none;
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     text-decoration: none;
-    box-sizing:border-box; 
-}/*reseter*/
+    box-sizing: border-box;
+}
+
+/* Définition des polices de caractères */
 @font-face {
-    font-family:"VproRegular";
+    font-family: "VproRegular";
     src: url("Fonts/VisueltPro-Regular.ttf");
 }
 @font-face {
-    font-family:"VproMedium";
+    font-family: "VproMedium";
     src: url("Fonts/VisueltPro-Medium.ttf");
 }
 @font-face {
-    font-family:"VproBold";
+    font-family: "VproBold";
     src: url("Fonts/VisueltPro-Bold.ttf");
 }
-
 @font-face {
-    font-family:"VproBlack";
+    font-family: "VproBlack";
     src: url("Fonts/VisueltPro-Black.ttf");
 }
-body{position: relative;  background-color:#F0EBD8;}
-.main-interface{
+
+/* Styles de base pour le corps du document */
+body {
+    position: relative;
+    background-color: #F0EBD8;
+}
+
+/* Styles pour la section principale */
+.main-interface {
     width: 100%;
-    height:100vh;
+    height: 100vh;
     padding-left: 50px;
-    padding-right:50px;
-    font-family:"VproRegular",sans-serif;
+    padding-right: 50px;
+    font-family: "VproRegular", sans-serif;
     font-size: 15px;
 }
-nav{
+
+/* Styles pour la barre de navigation */
+nav {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
-    right:0;
+    right: 0;
     bottom: 0;
-    /* z-index:0; */
-    width:100%;
-    height:48px;
-    background-color:#F0EBD8; 
+    width: 100%;
+    height: 48px;
+    background-color: #F0EBD8;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left:50px;
-    padding-right:50px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
-/*Reflechir à un moye de rendre ce bloc un peu plus esthetique*/
-nav div{
+
+/* Styles pour les éléments de navigation */
+nav div {
     display: flex;
     align-items: center;
     width: fit-content;
 }
-nav div span a{
-    color:#0D1321;
+
+nav div span a {
+    color: #0D1321;
     font-family: "VproBold";
     margin-right: 5px;
 }
-.content{
-    /* z-index:1; */
-    width:fit-content;
+
+/* Styles pour le contenu principal */
+.content {
+    width: fit-content;
     height: fit-content;
-    color:black;
-    /* background-color:black; */
-    padding-left:200px;
-    padding-right:200px;
-    margin:50px;
+    color: black;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin: 50px;
 }
-.content li{margin-top: 10px;}
-.promptZone-container{
+
+/* Styles pour les éléments de liste dans le contenu */
+.content li {
+    margin-top: 10px;
+}
+
+/* Styles pour la zone de saisie de texte */
+.promptZone-container {
     position: fixed;
-    top:90%;
-    left:35%;
+    top: 90%;
+    left: 35%;
     width: fit-content;
     height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-.promptZone{
+
+.promptZone {
     width: 400px;
     border: 1px solid #0D1321;
-    border-radius:20px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,48 +109,54 @@ nav div span a{
     padding-right: 18px;
     background-color: #0D1321;
 }
-input{
-    outline:none;
+
+/* Styles pour les éléments de saisie de texte */
+input {
+    outline: none;
     height: 44px;
     width: 300px;
     font-size: 12px;
-    font-family:"VproRegular";
-    color:white;
+    font-family: "VproRegular";
+    color: white;
     background-color: #0D1321;
     border: none;
 }
-#sendinIcon{
+
+#sendinIcon {
     cursor: pointer;
 }
-#mic-icon{
-    cursor:pointer;
+
+/* Styles pour l'icône du microphone */
+#mic-icon {
+    cursor: pointer;
     background-color: #0D1321;
     font-size: 23px;
     color: #F0EBD8;
     display: flex;
     align-items: center;
     justify-content: center;
-    height:33px;
-    width:33px; 
-    border-radius:33px;
-
+    height: 33px;
+    width: 33px;
+    border-radius: 33px;
     margin-left: 15px;
 }
-.chat-content li{
-    width:fit-content;
-    height: fit-content;
-    min-width:100px;
-    min-height:48px;
-    padding: 15px;
 
+/* Styles pour les éléments de contenu de la discussion */
+.chat-content li {
+    width: fit-content;
+    height: fit-content;
+    min-width: 100px;
+    min-height: 48px;
+    padding: 15px;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
-    background-color:#D9D9D9;
+    background-color: #D9D9D9;
     border-radius: 20px;
 }
-::placeholder{
-    color:#3E5C76;
+
+/* Styles pour le texte d'indication de champ de saisie */
+::placeholder {
+    color: #3E5C76;
     opacity: 0.7;
     font-size: 12px;
 }
