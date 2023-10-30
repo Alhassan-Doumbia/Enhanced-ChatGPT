@@ -1,0 +1,17 @@
+pour pouvoir recueper le contenu d'un INPUT , on peut utiliser la methode Value lorsqu'on est entrain 
+GetElementById ou faire des Query selector:
+Exemple :
+let Query=document.GetElementById("InputField").Value
+
+J'i appris que lorsqu'on voulait effectuer des commandes sur javascript , on utilise naturellement des event listener 
+les evenements qu'on paroduit(les actions donc) on tous un comportement par defaut 
+
+un comportement par defaut qui peut être depreciable à la longue  raison pour laquelle on peut les desactiver dans le 
+bloc de code propre à l'event listener en faisant ;"nom du parametre".preventDefault()
+
+exemple 
+
+const form = document.querySelector('form');
+form.addEventListener('keyPress',(event){
+    event.preventDefault(); //pour eviter que le formulaire se soumette automatiquement apres une touche enfoncee
+})

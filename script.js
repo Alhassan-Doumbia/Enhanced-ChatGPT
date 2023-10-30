@@ -1,11 +1,13 @@
 const sendIcon = document.getElementById("sendinIcon");
 const chatContent = document.querySelector(".chat-content");
-
+const inputField = document.getElementById("userInputField");
 function showUserQuery() {
     const userInput = document.getElementById("userInputField").value;
     const userQuery = document.createElement("li");
     userQuery.innerText = userInput;
     chatContent.appendChild(userQuery);
+    inputField.value = "";
+    return false;
 }
 
 function speechRecognition() {
@@ -38,8 +40,6 @@ sendIcon.addEventListener("click", showUserQuery);
 const micIcon = document.querySelector("#mic-icon");
 // Réagir au clic sur l'icône du microphone
 micIcon.addEventListener("click", speechRecognition);// on a supprimé 
-const inputField = document.getElementById("userInputField");
-
 // Réagir à la pression de la touche "Entrée" pour envoyer la requête
 inputField.addEventListener('keypress', function (event) {
     if (event.keyCode === 13) {

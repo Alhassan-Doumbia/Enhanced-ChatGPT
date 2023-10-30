@@ -1,0 +1,11 @@
+à faire : 
+-integrer l'API de chatGPT via node 
+-faire les test dans différentes conditions(à imaginer)
+
+-En terme de design, commencer à imaginer des animations ,pour l'apparitons des reponses 
+    -imaginer une animations pour l'icone du micro en écoute 
+    -imaginer la stylisation des messages d'erreurs
+
+
+-imaginer les erreurs possible(les afficher dans la console pour deboqgage )
+-et commencer à les eliminer une par une pour ou du moins à les maitriser 
