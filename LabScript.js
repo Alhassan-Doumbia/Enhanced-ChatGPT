@@ -37,8 +37,15 @@ function speechReco(){
 //Important : dans ces deux blocs d'actions , faudra trouver un moyen pour faire en sorte que le contenu de Show UserQuery et de SpeechReco
 //soit envoyé à L'API de chatGPT
 
+sendinIcon.addEventListener("click",()=>{
+    if(inputField.value===""){
+        console.log("empty prompt , not displayed")
+    }
+    if(inputField.value !=""){showUserQuery()}
+})//il faut trouver une methode qui me permettteras de savois si le truc est rempli ou non
 
-sendinIcon.addEventListener("click",showUserQuery)//ecrire(showUserQuery()) proovoque un appel immédiat de la fonction et donc lannce la reconnaissance vocale  au chargement de la page 
+
+//ecrire(showUserQuery()) proovoque un appel immédiat de la fonction et donc lannce la reconnaissance vocale  au chargement de la page 
 // j'aurais pas pu m'en apercevoir car jusque là j'utilisais pas des fonctions hyper dynamiques , mais toujours est il que mes autres fonctions font le taff , même si
 //il font un appel immédiat , en fait c'est ce qui creait la bulle où y avait rien
 //Integration de la reconnaissance vocale 
@@ -47,9 +54,14 @@ micIcon.addEventListener('click',speechReco)
 
 //utiliser le champs de l'input pour pouvoir utliser la touche entrer
 inputField.addEventListener('keypress',function (event) {
-    if(event.keyCode===13){showUserQuery();event.preventDefault();
+    if(event.keyCode===13 && inputField.value==""){
+        console.log("empty prompt,not displayed")
+        event.preventDefault();
+    }
+    if(event.keyCode===13&& inputField.value != ""){showUserQuery();event.preventDefault();
          inputField.value="";return false;//Pour vider le contenu du bail
         }
+        
 })
 
 
