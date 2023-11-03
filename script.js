@@ -1,3 +1,4 @@
+const logIcon= document.getElementById("LogIcon");
 const sendIcon = document.getElementById("sendinIcon");
 const chatContent = document.querySelector(".chat-content");
 const inputField = document.getElementById("userInputField");
@@ -38,7 +39,11 @@ function speechRecognition() {
 // Réagir au clic sur l'icône d'envoi
 sendinIcon.addEventListener("click",()=>{
     if(inputField.value===""){console.log("empty prompt , not displayed")}
-    if(inputField.value !=""){showUserQuery()}})
+    if(inputField.value !=""){
+        logIcon.style="animation:logrotation 3s ease-in-out 3"
+        setTimeout(()=>{logIcon.style=""},9000)
+        showUserQuery();
+    }})
 
 const micIcon = document.querySelector("#mic-icon");
 // Réagir au clic sur l'icône du microphone
@@ -53,6 +58,8 @@ inputField.addEventListener('keypress', function (event) {
     if (event.keyCode === 13) {
         showUserQuery();
         event.preventDefault();
+        logIcon.style="animation:logrotation 3s ease-in-out 3"
+        setTimeout(()=>{logIcon.style=""},9000)
         inputField.value = "";
         return false;
     }

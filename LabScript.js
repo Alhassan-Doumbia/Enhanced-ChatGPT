@@ -1,4 +1,6 @@
 // On va d'abord gerer la possibilité d'afficher les requêtes de l'utilisateur à l'écran 
+
+const logIcon= document.getElementById("LogIcon");
 let sendinIcon=document.getElementById("sendinIcon");
 let chat_content=document.querySelector(".chat-content");
 let inputField=document.getElementById("userInputField")//Pour pouvoir utiliser la touche entré
@@ -41,7 +43,10 @@ sendinIcon.addEventListener("click",()=>{
     if(inputField.value===""){
         console.log("empty prompt , not displayed")
     }
-    if(inputField.value !=""){showUserQuery()}
+    if(inputField.value !=""){
+        logIcon.style="animation:logrotation 3s ease-in-out 3"
+        setTimeout(()=>{logIcon.style=""},9000)
+        showUserQuery()}
 })//il faut trouver une methode qui me permettteras de savois si le truc est rempli ou non
 
 
@@ -58,8 +63,13 @@ inputField.addEventListener('keypress',function (event) {
         console.log("empty prompt,not displayed")
         event.preventDefault();
     }
-    if(event.keyCode===13&& inputField.value != ""){showUserQuery();event.preventDefault();
+    if(event.keyCode===13&& inputField.value != ""){
+         showUserQuery();
+         event.preventDefault();
+         logIcon.style="animation:logrotation 3s ease-in-out 3"//pour pouvoir animer la page le temps que la reponse de GPT ne vienne 
+         setTimeout(()=>{logIcon.style=""},9000);//permet de vider la propriété d'aimation
          inputField.value="";return false;//Pour vider le contenu du bail
+
         }
         
 })
