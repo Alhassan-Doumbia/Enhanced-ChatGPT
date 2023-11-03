@@ -36,19 +36,26 @@ function speechRecognition() {
 }
 
 // Réagir au clic sur l'icône d'envoi
-sendIcon.addEventListener("click", showUserQuery);
+sendinIcon.addEventListener("click",()=>{
+    if(inputField.value===""){console.log("empty prompt , not displayed")}
+    if(inputField.value !=""){showUserQuery()}})
+
 const micIcon = document.querySelector("#mic-icon");
 // Réagir au clic sur l'icône du microphone
 micIcon.addEventListener("click", speechRecognition);// on a supprimé 
 // Réagir à la pression de la touche "Entrée" pour envoyer la requête
 inputField.addEventListener('keypress', function (event) {
+
+    if(event.keyCode===13 && inputField.value==""){
+        console.log("empty prompt,not displayed")
+        event.preventDefault();
+    }
     if (event.keyCode === 13) {
         showUserQuery();
         event.preventDefault();
         inputField.value = "";
         return false;
     }
-    if(event.keyCode===13 &&  inputField.value==""){
-        console.log("empty prompt,not displayed")
-    }
+    
 });
+//commentaire pour me permettre de commit
