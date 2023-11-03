@@ -83,13 +83,7 @@ nav div span a {
 }
 
 /* Styles pour les éléments de liste dans le contenu */
-.content li {
-    margin-top: 10px;
-    
-}
-.chat-content li{
-    animation: bubbleApearing 5s cubic-bezier(0.63,-0.05, 0.18, 0.94) 1;
-}
+
 
 /* Styles pour la zone de saisie de texte */
 .promptZone-container {
@@ -127,7 +121,7 @@ input {
     border: none;
 }
 #LogIcon{
-    animation:logrotation 5s ease-in-out infinite;
+    animation:logrotation 3s ease-in-out infinite;
     /* C'est ce truc qui sera intégré dans mon code JS via une fonction */
 }
 #sendinIcon {
@@ -153,13 +147,17 @@ input {
 .chat-content li {
     width: fit-content;
     height: fit-content;
-    min-width: 100px;
-    min-height: 48px;
+    max-width:844px;
+    word-wrap:break-word;/*pour pouvoir faire les retour à la ligne */
+    min-width:100px;
+    min-height:48px;
     padding: 15px;
     display: flex;
     align-items: center;
+    margin-top:10px;
     background-color: #D9D9D9;
     border-radius: 20px;
+    animation: bubbleAppearing 1s cubic-bezier(0.63,-0.05, 0.18, 0.94) 1;  /*Concluant*/
 }
 
 /* Styles pour le texte d'indication de champ de saisie */
@@ -188,11 +186,11 @@ input {
 
 @keyframes bubbleAppearing {
     from {
-      /* transform: translateX(-100%); */
+      transform: translateY(100%); 
       opacity: 0;
     }
     to {
-      /* transform: translateX(0); */
+      transform: translateY(0); 
       opacity: 1;
     }
   }
