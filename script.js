@@ -17,7 +17,7 @@ function speechRecognition() {
     recognition.continuous = false;
     recognition.lang = "fr-FR"//"en-US";
     recognition.interimResults = true;
-    console.log('clicked');// pour le debogage
+    console.log('clicked');// pour le debogage 
     let currentTranscription = '';
     let timeout;
 
@@ -47,5 +47,8 @@ inputField.addEventListener('keypress', function (event) {
         event.preventDefault();
         inputField.value = "";
         return false;
+    }
+    if(event.keyCode===13 &&  inputField.value==""){
+        console.log("empty prompt,not displayed")
     }
 });
